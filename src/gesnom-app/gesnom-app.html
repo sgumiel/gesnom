@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../gesnom-calendario-mes/gesnom-calendario-mes.html">
+
+<dom-module id="gesnom-app">
+  <template>
+    <style include="iron-flex">
+      :host {
+        display: block;
+        text-align: center;
+      }
+      .iron-flex{
+        width: 95%;
+        height: 200px;
+        padding-top: 10px;
+        border-style: solid;
+        border-color: black;
+      }
+    </style>
+
+    <div class="layout horizontal">
+     
+      <gesnom-calendario-mes class="iron-flex" mes="12" anio="2017"></gesnom-calendario-mes>
+    </div>
+    
+
+    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'gesnom-app',
+      properties: {
+        prop1: {
+          type: String,
+          value: 'Mundo'
+        }
+      }
+    });
+    
+  </script>
+</dom-module>

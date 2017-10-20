@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="gumi-nombredia-numero">
+  <template>
+    <style include="iron-flex">
+    	:host {
+        	display: block;
+        	margin: 0px;
+        	padding: 0px;
+    	}
+      .horas{
+        width: 80%;
+      }
+      .valor{
+        width: 20%;
+      }
+      input[type="text"]
+      {
+          background: rgba(0, 0, 0, 0);
+          border: none;
+      }
+    </style>
+    <div class="layout horizontal">
+      <div class="horas">Horas</div>
+      <div class="valor"><input type="text"/ value="8"></div>
+      
+    </div>
+  </template>
+  <script>
+
+    Polymer({
+      is: 'gumi-nombredia-numero',
+      properties: {
+        aa: {
+          type: Number,
+          value: 2
+        }
+      }
+    });
+    
+  </script>
+</dom-module>

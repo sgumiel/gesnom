@@ -1,0 +1,53 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../gumi-nombre-mes/gumi-nombre-mes.html">
+<link rel="import" href="../gumi-cabecera-calendario-mes/gumi-cabecera-calendario-mes.html">
+<link rel="import" href="../gumi-nombredia-numero/gumi-nombredia-numero.html">
+
+
+<dom-module id="gesnom-calendario-mes">
+  <template>
+    <style include="iron-flex">
+      :host {
+        display: block;
+      }
+      paper-card {
+        width: 100%;
+      }
+      gumi-nombredia-numero{
+        width: 20%;
+      }
+      gumi-cabecera-calendario-mes{
+        width: 70%
+      }
+      
+    </style>
+    <paper-card elevation="0">
+      <gumi-nombre-mes numeromes='[[mes]]' anio='[[anio]]'></gumi-nombre-mes>
+      <div class="layout horizontal"> 
+        <gumi-nombredia-numero></gumi-nombredia-numero>
+        <gumi-cabecera-calendario-mes class="iron-flex"></gumi-cabecera-calendario-mes>
+      </div>
+      
+    <paper-card>
+    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'gesnom-calendario-mes',
+      properties: {
+        anio: {
+          type: Number,
+          value: 0
+        },
+        mes: {
+          type: Number,
+          value: 0
+        }
+      }
+    });
+    
+  </script>
+</dom-module>

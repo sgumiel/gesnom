@@ -1,0 +1,49 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="gumi-cabecera-calendario-mes">
+  <template>
+    <style include="iron-flex">
+    	:host {
+        	display: block;
+        	margin: 0px;
+        	padding: 0px;
+    	}
+		.iron-flex{
+	      	width: 10%;
+	      	border-color: black;
+	      	border-bottom-style: solid;
+	        border-bottom-width: 1px;
+	        border-right-style: solid;
+	        border-right-width: 1px;
+	        background-color: blue;
+	        font-weight: bold;
+      	}
+    </style>
+    <div class="layout horizontal marco">
+    	
+	      <div class="iron-flex">Entrada</div>
+	      <div class="iron-flex">Salida</div>
+	      <div class="iron-flex">Entrada</div>
+	      <div class="iron-flex">Salida</div>
+	      <div class="iron-flex">Total</div>
+	      <div class="iron-flex">Dif. Día</div>
+	      <div class="iron-flex">Dif. Sem</div>
+	      <div class="iron-flex">Dif. Mes</div>
+      
+    </div>
+  </template>
+  <script>
+
+    Polymer({
+      is: 'gumi-cabecera-calendario-mes',
+      properties: {
+        aa: {
+          type: Number,
+          value: 2
+        }
+      }
+    });
+    
+  </script>
+</dom-module>

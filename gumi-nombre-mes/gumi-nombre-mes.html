@@ -1,0 +1,46 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="gumi-nombre-mes">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      div {
+        font-size: 15px;
+        border-bottom: solid;
+        border-bottom-width: 1px;
+      }
+    </style>
+    <div>Horas del mes de [[nombremes]] de [[anio]]</div>
+  </template>
+
+
+  <script>
+
+    const NOMBRE_MES = ['','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+    Polymer({
+      is: 'gumi-nombre-mes',
+      properties: {
+        anio: {
+          type: Number,
+          value: 0
+        },
+        numeromes: {
+          type: Number
+        },
+        nombremes: {
+          type: String,
+          computed: 'getNombreMes(numeromes)'
+        }
+      },
+      getNombreMes(num){
+        return NOMBRE_MES[num];
+      }
+      
+
+    });
+    
+  </script>
+</dom-module>

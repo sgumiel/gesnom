@@ -1,0 +1,7 @@
+{
+  "name": "gesnom",
+  "short_name": "gesnom",
+  "description": "Gestion de nominas con Polymer 2.0",
+  "start_url": "/",
+  "display": "standalone"
+}
